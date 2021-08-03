@@ -70,7 +70,15 @@ var fight = function(enemyName) {
 };
 
 // run fight function to start game
-for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
+for (var i = 0; i < enemyNames.length; i++) {
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    fight(pickedEnemyName);
+}
+  var fight = function(enemyName) {
+      //repeat and execute as long as the enemy-robot is alive
+      while(enemyHealth > 0) {
+        fight();
+      }
   }
-// fight();
+
